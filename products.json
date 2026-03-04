@@ -1,0 +1,30 @@
+[
+  {
+    "product_id": 1,
+    "product_name": "Laptop",
+    "price": 75000,
+    "category": "Electronics",
+    "rating": 4.5
+  },
+  {
+    "product_id": 2,
+    "product_name": "Headphones",
+    "price": 2500,
+    "category": "Electronics",
+    "rating": 4.2
+  },
+  {
+    "product_id": 3,
+    "product_name": "Running Shoes",
+    "price": 3500,
+    "category": "Sports",
+    "rating": 4.0
+  },
+  {
+    "product_id": 4,
+    "product_name": "Backpack",
+    "price": 1200,
+    "category": "Accessories",
+    "rating": 3.9
+  }
+]
