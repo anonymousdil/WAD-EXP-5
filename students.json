@@ -1,0 +1,44 @@
+{
+  "students": [
+    {
+      "student_id": 101,
+      "name": "Rahul Sharma",
+      "department": "Computer Science",
+      "cgpa": 8.5,
+      "isHosteller": true,
+      "skills": ["Java", "Python", "SQL"]
+    },
+    {
+      "student_id": 102,
+      "name": "Ananya Rao",
+      "department": "Electronics",
+      "cgpa": 7.2,
+      "isHosteller": false,
+      "skills": ["C", "MATLAB"]
+    },
+    {
+      "student_id": 103,
+      "name": "Arjun Patel",
+      "department": "Mechanical",
+      "cgpa": 8.9,
+      "isHosteller": true,
+      "skills": ["CAD", "SolidWorks"]
+    },
+    {
+      "student_id": 104,
+      "name": "Priya Nair",
+      "department": "Computer Science",
+      "cgpa": 9.1,
+      "isHosteller": false,
+      "skills": ["JavaScript", "React"]
+    },
+    {
+      "student_id": 105,
+      "name": "Vikram Singh",
+      "department": "Civil",
+      "cgpa": 7.8,
+      "isHosteller": true,
+      "skills": ["AutoCAD", "Surveying"]
+    }
+  ]
+}
