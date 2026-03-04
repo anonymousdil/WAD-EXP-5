@@ -1,0 +1,35 @@
+{
+  "course_id": "CS301",
+  "course_name": "Web Application Development",
+  "instructor": "Dr. Kumar",
+  "students": [
+    {
+      "student_id": 101,
+      "name": "Rahul Sharma",
+      "attendance_percentage": 80,
+      "internal_marks": 45,
+      "assignment_scores": [80, 75, 85]
+    },
+    {
+      "student_id": 102,
+      "name": "Ananya Rao",
+      "attendance_percentage": 70,
+      "internal_marks": 50,
+      "assignment_scores": [60, 65, 70]
+    },
+    {
+      "student_id": 103,
+      "name": "Arjun Patel",
+      "attendance_percentage": 90,
+      "internal_marks": 35,
+      "assignment_scores": [75, 80, 70]
+    },
+    {
+      "student_id": 104,
+      "name": "Priya Nair",
+      "attendance_percentage": 85,
+      "internal_marks": 55,
+      "assignment_scores": [90, 88, 92]
+    }
+  ]
+}
