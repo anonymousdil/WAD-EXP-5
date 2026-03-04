@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Product Display</title>
+</head>
+
+<body>
+
+<h2>Products</h2>
+
+<select id="categoryFilter">
+<option value="all">All</option>
+<option value="Electronics">Electronics</option>
+<option value="Sports">Sports</option>
+<option value="Accessories">Accessories</option>
+</select>
+
+<button onclick="filterProducts()">Filter</button>
+
+<table border="1" id="productTable">
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Price</th>
+<th>Category</th>
+<th>Rating</th>
+</tr>
+</table>
+
+<h3 id="avgRating"></h3>
+
+<script>
+
+let products = [];
+
+fetch("products.json")
+.then(res => res.json())
+.then(data => {
+    products = data;
+    displayProducts(products);
+    calculateAverage();
+});
+
+function displayProducts(list){
+
+    const table = document.getElementById("productTable");
+
+    table.innerHTML = `
+    <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Category</th>
+    <th>Rating</th>
+    </tr>
+    `;
+
+    list.forEach(p=>{
+        table.innerHTML += `
+        <tr>
+        <td>${p.product_id}</td>
+        <td>${p.product_name}</td>
+        <td>${p.price}</td>
+        <td>${p.category}</td>
+        <td>${p.rating}</td>
+        </tr>
+        `;
+    });
+
+}
+
+function filterProducts(){
+
+    const category = document.getElementById("categoryFilter").value;
+
+    if(category === "all"){
+        displayProducts(products);
+    }
+    else{
+        const filtered = products.filter(p => p.category === category);
+        displayProducts(filtered);
+    }
+
+}
+
+function calculateAverage(){
+
+    let sum = 0;
+
+    products.forEach(p=>{
+        sum += p.rating;
+    });
+
+    const avg = sum / products.length;
+
+    document.getElementById("avgRating").innerText =
+        "Average Rating: " + avg.toFixed(2);
+
+}
+
+</script>
+
+</body>
+</html>
